@@ -13,10 +13,10 @@ class nginx (
   String $service_pattern               = $::nginx::params::service_pattern,
   String $service_ensure                = $::nginx::params::service_ensure,
   String $service_name                  = $::nginx::params::service_name,
-  Boolean $service_enable                = $::nginx::params::service_enable,
-  Boolean $service_hasstatus             = $::nginx::params::service_hasstatus,
-  Boolean $service_hasrestart            = $::nginx::params::service_hasrestart,
-  Boolean $docroot                       = $::nginx::params::docroot,
+  Boolean $service_enable               = $::nginx::params::service_enable,
+  Boolean $service_hasstatus            = $::nginx::params::service_hasstatus,
+  Boolean $service_hasrestart           = $::nginx::params::service_hasrestart,
+  String $docroot                       = $::nginx::params::docroot,
 ) inherits ::nginx::params {
   
   class { '::nginx::install': }
